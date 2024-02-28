@@ -13,7 +13,7 @@ const userReducer = (state = initialState, action) => {
         ...state,
         ...action.payload
       }
-    default: // для остальных редьюсеров (т.к. редьюсер вызывается для всех)
+    default: 
       return state;
   }
 };

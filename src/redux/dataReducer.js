@@ -12,7 +12,7 @@ const dataReducer = (state = initialState, action) => {
         // modify existing item
         new_data = state.data.map((obj) => {
           if (obj.id == action.payload.id) 
-            return action.payload; //{text: action.payload.text, price: action.payload.price, id: obj.id}
+            return action.payload; 
           else
             return obj;
         });  
@@ -27,7 +27,7 @@ const dataReducer = (state = initialState, action) => {
     case DELETE_USER_DATA:
         const filtered_data = state.data.filter((obj) => (obj.id != action.payload.id));
         return {data: filtered_data};
-    default: // для остальных редьюсеров (т.к. редьюсер вызывается для всех)
+    default: 
       return state;
   }
 };
